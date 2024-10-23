@@ -1,0 +1,57 @@
+package areas;
+//Calcular el área de un triángulo, cuadrado, rectángulo y de un circulo//
+import java.util.Scanner;
+
+public class Areas {
+static Scanner leer = new Scanner(System.in);
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int opcion;
+		
+		while(true) {
+	    System.out.println("-----Ingrese la opción que guste-----");
+	    System.out.println("1. Área de un Triángulo");
+	    System.out.println("2. Área de un Cuadrado");
+	    System.out.println("3. Área de un Rectángulo");
+	    System.out.println("4. Área de un Circulo");
+	    opcion = leer.nextInt();
+	    
+	    if (opcion == 4) break;
+	    switch(opcion) {
+	    case 1: 
+	    	System.out.println("Ingrese la base: ");
+	    	double base = leer.nextDouble();
+	    	System.out.println("Ingrese la altura: ");
+	    	double altura = leer.nextDouble();
+	    	double area = (base*altura/2);
+	    	System.out.println("El área del triángulo es: "+area);
+	    }
+	    if (opcion == 4) break;
+	    switch(opcion) {
+	    case 2:
+	    	System.out.println("Ingrese el valor del lado: ");
+	    	double lado = leer.nextDouble();
+	    	double area2 = (lado*lado);
+	    	System.out.println("El área del cuadrado es: "+area2);
+	    }
+	    if (opcion == 4) break;
+	    switch(opcion) {
+	    case 3:
+	    	System.out.println("Ingrese el largo: ");
+	    	double largo = leer.nextDouble();
+	    	System.out.println("Ingrese el ancho: ");
+	    	double ancho = leer.nextDouble();
+	    	double area3 = (largo*ancho);
+	    	System.out.println("El área del rectángulo es: "+area3);
+	    }
+	    if (opcion == 4) break;
+	    switch(opcion) {
+	    case 4:
+	    	System.out.println("Ingrese el radio: ");
+	    	double radio = leer.nextDouble();
+	    	double area4 = Math.PI*Math.pow(radio, 2);
+	    	System.out.println("El área del circulo es: "+area4);	
+	    }
+	}
+}
+}
