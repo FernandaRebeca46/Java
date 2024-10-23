@@ -1,0 +1,22 @@
+package multiplos;
+//Números menores de 1000 y múltiplos de 3 y 5//
+public class Multiplos {
+
+	public static void main(String[] args) {
+		        int Multiplo1 = 0;
+		        int Multiplo2 = 0;
+
+		        System.out.println("Estos son los números múltiplos de 3 y 5 menores de 1000:");
+
+		        for (int a = 0; a < 1000; a++) {
+		            if (a % 3 == 0) {
+		                Multiplo1++;
+		                System.out.println("--> Múltiplo de 3: " + a);
+		            }
+		            if (a % 5 == 0) {
+		                Multiplo2++;
+		                System.out.println("--> Múltiplo de 5: " + a);
+		            }
+		        }
+		    }
+		}
