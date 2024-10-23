@@ -1,0 +1,81 @@
+package Mayor;
+//5 números que muestre el mayor de ellos//
+import java.util.Scanner;
+public class Mayor2 {
+
+	    public static void main(String[] args) {
+	        Scanner leer = new Scanner(System.in);
+	        int a, b, c, d, e;
+
+	        System.out.println("Ingresar 5 números:");
+	        a = leer.nextInt();
+	        b = leer.nextInt();
+	        c = leer.nextInt();
+	        d = leer.nextInt();
+	        e = leer.nextInt();
+
+	        if (a != b && a != c && a != d && a != e && b != c && b != d && b != e && c != d && c != e && d != e) {
+	            if (a > b) {
+	                if (a > c) {
+	                    if (a > d) {
+	                        if (a > e) {
+	                            System.out.println("El número mayor es: " + a);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    } else {
+	                        if (d > e) {
+	                            System.out.println("El número mayor es: " + d);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    }
+	                } else {
+	                    if (c > d) {
+	                        if (c > e) {
+	                            System.out.println("El número mayor es: " + c);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    } else {
+	                        if (d > e) {
+	                            System.out.println("El número mayor es: " + d);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    }
+	                }
+	            } else {
+	                if (b > c) {
+	                    if (b > d) {
+	                        if (b > e) {
+	                            System.out.println("El número mayor es: " + b);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    } else {
+	                        if (d > e) {
+	                            System.out.println("El número mayor es: " + d);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    }
+	                } else {
+	                    if (c > d) {
+	                        if (c > e) {
+	                            System.out.println("El número mayor es: " + c);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    } else {
+	                        if (d > e) {
+	                            System.out.println("El número mayor es: " + d);
+	                        } else {
+	                            System.out.println("El número mayor es: " + e);
+	                        }
+	                    }
+	                }
+	            }
+	        } 
+	    }
+	}
