@@ -1,0 +1,41 @@
+package asterisco;
+//Flecha direccionada hacía la derecha//
+import java.util.Scanner;
+public class Asterisco {
+
+	public static void main(String a[]) { 
+        Scanner s = new Scanner(System.in); 
+        short cantidad = s.nextShort(); 
+        int contador = 1; 
+        while (contador <= cantidad) {
+            int subContador = contador; 
+            while (subContador > 0) { 
+                System.out.print("*"); 
+                subContador--; 
+            }
+            int espacios = cantidad - contador; 
+            while (espacios > 0) {
+                System.out.print(" ");
+                espacios--; 
+            }
+            System.out.println(""); 
+            contador++; 
+        }
+
+        contador = cantidad - 1;
+        while (contador > 0) {
+            int subContador = contador; 
+            while (subContador > 0) { 
+                System.out.print("*"); 
+                subContador--; 
+            }
+            int espacios = cantidad - contador; 
+            while (espacios > 0) {
+                System.out.print(" ");
+                espacios--; 
+            }
+            System.out.println(""); 
+            contador--; 
+        }
+    } 
+}
