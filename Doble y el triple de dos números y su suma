@@ -1,0 +1,19 @@
+package calcular1;
+//Doble y el triple de dos números y su suma//
+import java.util.Scanner;
+public class Calcular1 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int num1, num2, total; 
+		System.out.println("Ingrese un número: ");
+		num1 = scanner.nextInt();
+		num1 = num1 * 3;
+		System.out.println("Ingrese un segundo número: ");
+		num2 = scanner.nextInt();
+		num2 = num2 * 2;
+		total = num1 + num2; 
+		System.out.println("El resultado es: " + total);
+}
+}
+
