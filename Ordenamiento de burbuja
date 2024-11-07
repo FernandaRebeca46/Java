@@ -1,0 +1,38 @@
+package burbuja;
+//Utilizar el ordenamiento de burbuja//
+//Números random desde 500 hasta 1000//
+
+import java.util.Random;
+
+public class Burbuja {
+
+    public static void main(String[] args) {
+        int arreglo[] = new int[100];
+        Random random = new Random();
+
+        for (int x = 0; x < arreglo.length; x++) {
+            arreglo[x] = 500 + random.nextInt(501);
+        }
+        System.out.println("Antes del ordenamiento:");
+        mostrarArreglo(arreglo);
+
+        //Ordenamiento de burbuja//
+        for (int x = 0; x < arreglo.length - 1; x++) {
+            for (int i = 0; i < arreglo.length - 1 - x; i++) {
+                if (arreglo[i] > arreglo[i + 1]) {
+                    int temp = arreglo[i];
+                    arreglo[i] = arreglo[i + 1];
+                    arreglo[i + 1] = temp;
+                }
+            }
+        } 
+        System.out.println("Después del ordenamiento:");
+        mostrarArreglo(arreglo);
+    }
+    public static void mostrarArreglo(int[] arreglo) {
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.print(arreglo[i] + " ");
+        }
+        System.out.println(); 
+    }
+}
