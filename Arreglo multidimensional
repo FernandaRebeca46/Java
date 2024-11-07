@@ -1,0 +1,22 @@
+package arreglomulti;
+//Arreglo de 2 dimensiones con tablas de multiplicar del 1 al 100//
+
+public class Arreglomulti {
+    public static void main(String[] args) {
+       
+        int tablas[][] = new int[100][100];
+        int i, j;
+
+        for (i = 0; i < 100; i++) {
+            for (j = 0; j < 100; j++) {
+                tablas[i][j] = (i+1) * (j+1);  
+            }
+        }
+        for (i = 0; i < 100; i++) {
+            for (j = 0; j < 100; j++) {
+                System.out.printf("%5d", tablas[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
