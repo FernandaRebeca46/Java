@@ -10,7 +10,8 @@ public class Nombres {
 		//nombres[2] = "";
 		nombres[3] = "Daniel Chaidez";
 		nombres[4] = "Ximena Reyes";
-		System.out.println(nombres);
+		//Introducir la opción deseada a imprimir
+		System.out.println(nombres[4]);
 	}
 
 }
