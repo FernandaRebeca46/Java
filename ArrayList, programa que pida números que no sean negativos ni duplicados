@@ -1,5 +1,5 @@
 package arraylist;
-//Programa que pida números enteros ingresados por teclado (no duplicados, ni negativos), estos se sumarán//
+//Programa que pida números enteros ingresados por teclado (no duplicados, ni negativos), estos se sumarán.//
 
 import java.util.ArrayList;
 import java.util.Scanner;
