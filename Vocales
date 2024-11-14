@@ -1,0 +1,47 @@
+package vocales;
+//Número de vocales en un nombre//
+class Character {
+    String name;
+}
+
+public class Vocales {
+
+    public static void main(String[] args) {
+        
+        Character p1 = new Character();
+        p1.name = "Jose Cervantes";
+        Character p2 = new Character();
+        p2.name = "Mario Suares";
+        Character p3 = new Character();
+        p3.name = "Mariana Navarro";
+        Character p4 = new Character();
+        p4.name = "Pedro Garcia";
+        Character p5 = new Character();
+        p5.name = "Ricardo Lopez";
+        
+        Character[] personajes = {p1, p2, p3, p4, p5};   
+
+        for (int x = 0; x < personajes.length; x++) {
+            String name = personajes[x].name;
+            System.out.println("-" + name);
+            System.out.println("Longitud del nombre: " + name.length());
+            
+
+            int contador = 0;
+            
+            for (int y = 0; y < name.length(); y++) {
+                char caracter = name.charAt(y);
+                
+                if (caracter == 'a' || 
+                		caracter == 'e' || 
+                		caracter == 'i' || 
+                		caracter == 'o' || 
+                		caracter == 'u') 
+                {
+                    contador++;
+                }
+            }
+            System.out.println("Número de vocales: " + contador);
+        }
+    }
+}
