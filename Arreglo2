@@ -1,0 +1,16 @@
+package Arrays;
+//Arrays = arreglo//
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Arrays {
+public static void main(String[] args) {
+int[] arreglo = new int[1000];
+String nombre = "José";
+arraysList.add(10);
+arraysList.add(20);
+arraysList.add(30);
+System.out.println(arraysList);
+}
+}
