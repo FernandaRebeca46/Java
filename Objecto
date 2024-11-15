@@ -1,0 +1,19 @@
+package objecto;
+//Imprimir los elementos de un arreglo sin necesidad de un índice//
+
+public class Objecto {
+
+	public static void main(String[] args) throws Exception {
+		Object[] arreglo = {
+		10.55, true, "Lunes", 5.5f, 45, 's',	
+		};
+		//Por cada elemento contenido en arreglo
+		for(int x = 0 ; x < arreglo.length; x++)
+		{
+			System.out.println(arreglo[x]);
+		}
+		for (Object o : arreglo) {
+			System.out.println(o);
+		}
+	}
+}
