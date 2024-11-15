@@ -1,16 +1,18 @@
-package Arrays;
+package arreglo2;
 //Arrays = arreglo//
 
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.ArrayList;
 
-public class Arrays {
-public static void main(String[] args) {
-int[] arreglo = new int[1000];
-String nombre = "José";
-arraysList.add(10);
-arraysList.add(20);
-arraysList.add(30);
-System.out.println(arraysList);
-}
-}
+public class Arreglo2 {
+	
+	public static void main(String[] args) {
+		int[] arreglo = new int[1000];
+		String nombre = "José";
+		ArrayList arrayList = new ArrayList<>();
+		arrayList.add(10);
+		arrayList.add(20);
+		arrayList.add(30);
+		System.out.println(arrayList);
+		}
+	}
