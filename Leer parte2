@@ -1,0 +1,14 @@
+package Aplicacion;
+import Modulos.Leer;
+
+public class App {
+    public static void main(String[] args){
+        Leer moduloLeer = new Leer();
+        String texto = moduloLeer.LeerTexto();
+        System.out.println("Escribiste " + texto);
+        int numero = moduloLeer.LeerNumeroEntero();
+        System.out.println("Escribiste el número " + numero);
+        double numero2 = moduloLeer.LeerNumeroDecimal();
+        System.out.println("Escribiste el número " + numero2);
+    }
+}
