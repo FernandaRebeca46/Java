@@ -1,0 +1,16 @@
+package identificadores2;
+
+public class Identificadores2 {
+
+	public static void main(String[] args) {
+		Object objeto;
+		String palabra = "Mañana no hay clases!!!!!";
+		palabra = "Mañana no hay clases!!!!! nos vemos el lunes!!";
+		float numero = 8945.6f;
+		Double numeroDouble = 468311.6321353;
+		objeto = palabra;
+		objeto = numero;
+		objeto = numeroDouble;
+		System.out.println(objeto);
+		}
+	}
