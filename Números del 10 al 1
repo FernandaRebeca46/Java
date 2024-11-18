@@ -1,0 +1,14 @@
+package numero;
+//Crea un programa que imprima los números desde 10 al 1.
+// != DIFERENTE
+
+public class Numero {
+
+	public static void main(String[] args) {
+		int x = 10;	//float x = 10;
+		while(x != 0) {
+			System.out.println(x--);
+		}
+		System.out.println("FIN!...");
+	}
+}
