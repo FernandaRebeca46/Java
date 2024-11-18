@@ -1,0 +1,11 @@
+package area;
+
+public class Area {
+
+	public static void main(String[] args) {
+		int base = 5;
+		int altura = 3;
+		float area = (base * altura) / 2.0f;
+		System.out.println("Área del Triángulo " + area);
+		}
+	}
