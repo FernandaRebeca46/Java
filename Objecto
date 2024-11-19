@@ -13,8 +13,16 @@ public class Objecto {
 			System.out.println(arreglo[x]);
 		}
 		for (Object o : arreglo) {
-		/*if(o instance String)
+		/* if(o instance String)
+		{
 		System.out.println("Es un String");
+		double numero = Double.parseDouble(o.toString());
+		}
+		if(o instanceof Double){
+		System.out.println("Es un Double");
+		double numero = (Double) o; // Casting
+		System.out.println (10 + numero);
+		}
 		*/
 			System.out.println(o);
 		}
