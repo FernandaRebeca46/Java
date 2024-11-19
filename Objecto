@@ -5,7 +5,7 @@ public class Objecto {
 
 	public static void main(String[] args) throws Exception {
 		Object[] arreglo = {
-		10.55, true, "Lunes", 5.5f, 45, 's',	
+		10.55, true, "Lunes", 5.5f, 45, 's', //personaje1
 		};
 		//Por cada elemento contenido en arreglo
 		for(int x = 0 ; x < arreglo.length; x++)
@@ -13,6 +13,9 @@ public class Objecto {
 			System.out.println(arreglo[x]);
 		}
 		for (Object o : arreglo) {
+		/*if(o instance String)
+		System.out.println("Es un String");
+		*/
 			System.out.println(o);
 		}
 	}
