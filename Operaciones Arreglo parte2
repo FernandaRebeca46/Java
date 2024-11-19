@@ -1,0 +1,12 @@
+package OperacionesArreglo2;
+import OperacionesArreglo.OperacionesArreglo;
+
+public class OperacionesArreglo2 {
+    public static void main(String[] args) {
+    Object[] arreglo = {1,9,5,7,3,45,4,23};
+    int[] arreglo3 = {1,9,5,7,3,45,4,23};
+    OperacionesArreglo i = new OperacionesArreglo();
+    System.out.println("La suma de los número es: " + i.SumadeValores(arreglo3));
+    System.out.println("La cantidad de objectos es: " + i.ValoresUnicos(arreglo));
+    }
+}
