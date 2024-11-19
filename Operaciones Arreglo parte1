@@ -1,0 +1,25 @@
+package OperacionesArreglo;
+/* 1) Suma de valores: Recibirá cómo parámetro un arreglo de enteros 
+y devolverá cómo resultado la suma de estos.
+2) Valores único: Recibirá cómo parámetro un arreglo de Object 
+y devolverá cómo resultado la cantidad de elementos diferentes. */
+import java.util.ArrayList;
+
+public class OperacionesArreglo {
+    public int SumadeValores(int[] arreglo){
+    int suma = 0;
+    for(int x : arreglo){
+        suma += x;
+    }
+    return suma;
+}
+public static int ValoresUnicos(Object[] arreglo){
+ArrayList<Object> arreglo2 = new ArrayList<>();
+for(Object o: arreglo){
+    if(!arreglo2.contains(o)){
+    arreglo2.add(o);
+            }
+        }
+        return arreglo2.size();
+    }
+}
