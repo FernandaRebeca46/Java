@@ -1,0 +1,18 @@
+package Imagen;
+
+import javax.swing.*;
+import javax.imageio.ImageIO;
+import java.io.File;
+
+public class imagen {
+    public static void main(String[] args) {
+        JFrame ventana = new JFrame();
+        ventana.setSize(500,500);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventana.setVisible(true);
+        ImageIcon imagen = new ImageIcon(ImageIO.read(new File("C:/Users/rebec/Pictures/2541865.jpg")));
+        JLabel labelsita = new JLabel(imagen);
+        ventana.add(labelsita);
+        ventana.pack();
+    }
+}
