@@ -1,0 +1,12 @@
+package calcu;
+
+public class Calcular_max_y_min {
+
+	public static void main(String[] args) {
+		int x = generarNumeroAleatorio(500, 1000);
+		System.out.println(x);
+	}
+	public static int generarNumeroAleatorio(int valorMinimo, int valorMaximo) {
+		return (int)((Math.random()*(valorMaximo - valorMinimo)) + valorMinimo);
+	}
+}
