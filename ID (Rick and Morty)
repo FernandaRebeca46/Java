@@ -1,0 +1,28 @@
+package id;
+import java.util.Scanner;
+
+public class ID {
+
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Ingrese el ID del personaje que deseas conocer (entre 1 y 826):");
+            int personajeId = scanner.nextInt();
+            if (personajeId < 1 || personajeId > 826) {
+                System.out.println("Error: El ID debe estar entre 1 y 826.");
+                return;
+            }
+            Character character = ApiUtil.getCharacterById(personajeId);
+            if (character == null) {
+                System.out.println("Error: No se encontró el ID proporcionado.");
+                return;
+            }
+            System.out.println("Nombre: " + character.name);
+            System.out.println("Estado: " + character.status);
+            System.out.println("Capítulos: " + character.episodes.size());
+            System.out.println("Imagen: " + character.image);
+
+        } catch (Exception e) {
+            System.out.println("Error: Ingrese un número entero..");
+        }
+    }
+}
