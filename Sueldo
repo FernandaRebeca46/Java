@@ -1,0 +1,23 @@
+package sueldo;
+import java.util.Scanner;
+//Utilizar estructura repetitiva para elegir al mayor
+
+public class Sueldo {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese su sueldo: ");
+        double sueldoMayor = scanner.nextDouble();
+        System.out.println("¿Cuántos sueldos más desea ingresar?");
+        int cantidadSueldos = scanner.nextInt();
+        for (int x = 1; x <= cantidadSueldos; x++) {
+            System.out.println("Ingrese el siguiente sueldo: ");
+            double sueldo = scanner.nextDouble();
+
+            if (sueldo > sueldoMayor){
+                sueldoMayor = sueldo;
+            }
+        }
+        System.out.println("El sueldo mayor es $ " + sueldoMayor);
+        }
+    }
