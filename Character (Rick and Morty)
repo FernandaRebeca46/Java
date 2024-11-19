@@ -1,0 +1,17 @@
+package personaje;
+
+public class Personaje {
+
+	 public static void main(String[] args) throws Exception {
+	        try {
+	            Character character = ApiUtil.getCharacterById(2);
+	            System.out.println("Nombre: " + character.name);
+	            System.out.println("Estado: " + character.status);
+	            int cantidad = 0;
+	            System.out.println("Cantidad de episodios: " + cantidad);
+	            System.out.println("Cantidad de episodios: " + character.episode.size());
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    }
+	}
