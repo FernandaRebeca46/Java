@@ -1,0 +1,38 @@
+public interface IConversion {
+    double convertirMillasAMetros(double millas);
+    double convertirMillasADecimetros(double millas);
+    double convertirMillasACentimetros(double millas);
+    double convertirMillasAKilometros(double millas);
+}
+public class Conversion implements IConversion {
+
+    @Override
+    public double convertirMillasAMetros(double millas) {
+        return millas * 1609.34;  // 1 milla = 1609.34 metros
+    }
+    @Override
+    public double convertirMillasADecimetros(double millas) {
+        return millas * 16093.4;  // 1 milla = 16093.4 decímetros
+    }
+    @Override
+    public double convertirMillasACentimetros(double millas) {
+        return millas * 160934;  // 1 milla = 160934 centímetros
+    }
+    @Override
+    public double convertirMillasAKilometros(double millas) {
+        return millas * 1.60934;  // 1 milla = 1.60934 kilómetros
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Conversion conversion = new Conversion();
+
+        double millas = 5;  // Ejemplo: convertir 5 millas
+        
+        // Realizamos las conversiones
+        System.out.println(millas + " millas son " + conversion.convertirMillasAMetros(millas) + " metros.");
+        System.out.println(millas + " millas son " + conversion.convertirMillasADecimetros(millas) + " decímetros.");
+        System.out.println(millas + " millas son " + conversion.convertirMillasACentimetros(millas) + " centímetros.");
+        System.out.println(millas + " millas son " + conversion.convertirMillasAKilometros(millas) + " kilómetros.");
+    }
+}
