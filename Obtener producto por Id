@@ -1,0 +1,52 @@
+package producto {
+//Crear una funcion llamada "obtenerProductoPorId", recibira como parametro un id (2-200) y devolvera un Objecto de tipo Producto.//
+
+public class Producto {
+    private int id;
+    private String nombre;
+
+    public Producto(int id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+    public int getId() {
+        return id;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    @Override
+    public String toString() {
+        return "Producto{id=" + id + ", nombre='" + nombre + "'}";
+    }
+}
+public class App {
+    public static void main(String[] args) {
+        Producto producto = obtenerProductoPorId(3);
+
+        if (producto != null) {
+            System.out.println("Producto encontrado: " + producto);
+        } else {
+            System.out.println("No se encontró el producto.");
+        }
+    }
+    public static Producto obtenerProductoPorId(int id) {
+        if (id < 2 || id > 200) {
+            System.out.println("ID fuera de rango. Debe estar entre 2 y 200.");
+            return null;
+        }
+        Producto[] productos = {
+            new Producto(2, "Estuchera"),
+            new Producto(3, "Acuarelas"),
+            new Producto(4, "Libreta")
+        };
+        for (Producto producto : productos) {
+            if (producto.getId() == id) {
+                return producto;
+            }
+        }
+        System.out.println("Producto no encontrado con ID: " + id);
+        return null;
+        }
+    }
+}
