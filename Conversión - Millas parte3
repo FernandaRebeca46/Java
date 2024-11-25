@@ -1,0 +1,13 @@
+package main;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Conversion conversion = new Conversion();
+        double millas = 8;
+        System.out.println(millas + " millas son " + conversion.convertirMillasAMetros(millas) + " metros.");
+        System.out.println(millas + " millas son " + conversion.convertirMillasADecimetros(millas) + " decímetros.");
+        System.out.println(millas + " millas son " + conversion.convertirMillasACentimetros(millas) + " centímetros.");
+        System.out.println(millas + " millas son " + conversion.convertirMillasAKilometros(millas) + " kilómetros.");
+    }
+}
