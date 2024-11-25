@@ -1,4 +1,4 @@
-package character {
+package character;
 public static Character getCharacterById(int id) throws Exception {
         String urlString = API_URL + id;
         URL url = new URL(urlString);
@@ -19,5 +19,4 @@ public static Character getCharacterById(int id) throws Exception {
         conn.disconnect();
         // Parsear el JSON manualmente
         return parseCharacter(output.toString());
-    }
 }
