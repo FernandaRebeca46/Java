@@ -1,4 +1,4 @@
-package sum {
+package sum;
 import java.util.Scanner;
 
 public class Sum {
@@ -7,6 +7,5 @@ public class Sum {
         String texto = scanner.nextLine();
         int numero = 9999;
         System.out.println("¡Hola, Mundo! " + numero + " - " + texto);
-       }
-    }
+     }
 }
