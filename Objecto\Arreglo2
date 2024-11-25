@@ -10,6 +10,6 @@ public class Main {
         System.out.println("\nRecorrido con for-each:");
         for (Object o : arreglo) {
             System.out.println(o);
-            }
         }
     }
+}
