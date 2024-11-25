@@ -1,0 +1,23 @@
+package character {
+public static Character getCharacterById(int id) throws Exception {
+        String urlString = API_URL + id;
+        URL url = new URL(urlString);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+ 
+        // Comprobar el código de respuesta
+        if (conn.getResponseCode() != 200) {
+            throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+        }
+        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        StringBuilder output = new StringBuilder();
+        String line;
+ 
+        while ((line = br.readLine()) != null) {
+            output.append(line);
+        }
+        conn.disconnect();
+        // Parsear el JSON manualmente
+        return parseCharacter(output.toString());
+    }
+}
