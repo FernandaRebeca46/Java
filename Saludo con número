@@ -1,0 +1,13 @@
+package sum{
+import java.util.Scanner;
+
+public class Sum {
+     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String texto = scanner.nextLine();
+        int numero = 9999;
+        System.out.println("hello, Word! " + numero + " - " + texto);
+        scanner.close(); 
+       }
+    }
+}
