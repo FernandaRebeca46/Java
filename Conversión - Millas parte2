@@ -1,0 +1,20 @@
+package conversion;
+public class Conversion implements IConversion {
+
+    @Override
+    public double convertirMillasAMetros(double millas) {
+        return millas * 1609.34;
+    }
+    @Override
+    public double convertirMillasADecimetros(double millas) {
+        return millas * 16093.4;
+    }
+    @Override
+    public double convertirMillasACentimetros(double millas) {
+        return millas * 160934;
+    }
+    @Override
+    public double convertirMillasAKilometros(double millas) {
+        return millas * 1.60934;
+    }
+}
