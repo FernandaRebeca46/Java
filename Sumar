@@ -1,0 +1,12 @@
+package suma{
+public class Suma {
+    static int suma(int variable1, int variable2 ){
+        return variable1 + variable2;
+    }
+
+    public static void main(String[] args) throws Exception { 
+        int resultado = suma(8, 5);
+        System.out.println(resultado);
+        }
+    }
+}
