@@ -1,4 +1,4 @@
-package burbuja {
+package burbuja;
 
 public static void main (String[] args){
   int [] arreglo = {4, 8, 5, 1}; // 4 x 4 = 16//
@@ -21,5 +21,4 @@ public static void main (String[] args){
 //Imprimir Ordenado//
 System.out.println(Arrays.toString(arreglo));
 System.out.println("FIN!!!");
-}
 }
