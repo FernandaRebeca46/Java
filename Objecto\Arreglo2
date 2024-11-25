@@ -1,0 +1,16 @@
+package main {
+public class Main {
+
+    public static void main(String[] args) {
+        Object[] arreglo = { 10.55, true, "Lunes", 5.5f, 45, 's' };
+        System.out.println("Recorrido con for clásico:");
+        for (int x = 0; x < arreglo.length; x++) {
+            System.out.println(arreglo[x]);
+        }
+        System.out.println("\nRecorrido con for-each:");
+        for (Object o : arreglo) {
+            System.out.println(o);
+            }
+        }
+    }
+}
