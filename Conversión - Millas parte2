@@ -1,6 +1,7 @@
-package conversion;
-public class Conversion implements IConversion {
+package Conversion;
+import IConversion.IConversion;
 
+public class Conversion implements IConversion {
     @Override
     public double convertirMillasAMetros(double millas) {
         return millas * 1609.34;
