@@ -1,4 +1,6 @@
-package iconversion;
+package IConversion;
+//Convertir millas a metros, decímetros, centímetros y kilómetros.//
+
 public interface IConversion {
     double convertirMillasAMetros(double millas);
     double convertirMillasADecimetros(double millas);
