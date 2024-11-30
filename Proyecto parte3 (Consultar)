@@ -1,0 +1,52 @@
+package Menu;
+import java.util.ArrayList;
+import java.util.List;
+//import java.util.Scanner;
+
+
+public class Consultar {
+    private ArrayList<Product> inventario;
+
+    public Consultar() {
+        this.inventario = new ArrayList<>();
+    }
+
+    public void añadirProducto(Product producto) {
+        inventario.add(producto);
+    }
+
+    public boolean eliminarProducto(int id) {
+        for (Product producto : inventario) {
+            if (producto.getId() == id) {
+                inventario.remove(producto);
+                return true;
+            }
+        }
+        return false;
+    }
+    public void consultarProductos(String texto) {
+        if (inventario.isEmpty()) {
+            System.out.println("No hay productos en el inventario.");
+        } else {
+            List<Product> resultados = new ArrayList<>();
+            for (Product producto : inventario) {
+                if (producto.getNombre().toLowerCase().contains(texto.toLowerCase()) ||
+                    producto.getDescripcion().toLowerCase().contains(texto.toLowerCase())) {
+                    resultados.add(producto);
+                }
+            }
+            if (resultados.isEmpty()) {
+                System.out.println("No se encontraron productos que coincidan con: " + texto);
+            } else {
+                System.out.println("Productos encontrados para '" + texto + "':");
+                for (Product producto : resultados) {
+                    System.out.println(producto);
+                    System.out.println("Url: " + producto.geturl());
+                }
+            }
+        }
+    }
+    public ArrayList<Product> getInventario() {
+        return inventario;
+    }
+}
