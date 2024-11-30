@@ -1,0 +1,22 @@
+package Menu;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Fecha {
+    public void mostrarFechaHoraActual(){
+    //public static void main(String[] args){
+    LocalDateTime fechaHoraActual = LocalDateTime.now();
+
+    //System.out.println(fechaHoraActual);
+    //System.out.println();
+
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("MMMM dd yyyy");
+    String resultado = formato.format(fechaHoraActual);
+    
+    System.out.println();
+    
+    formato = DateTimeFormatter.ofPattern("yyyy dd MMMM, HH:mm");
+    resultado = formato.format(fechaHoraActual);
+    System.out.println(resultado);
+    }
+}
