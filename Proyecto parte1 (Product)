@@ -1,0 +1,106 @@
+package Menu;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Product {
+    private int id;
+    private String descripcion;
+    private String nombre;
+    private int cantidad;
+    private double precio;
+    private List<String> url;
+
+    public Product(int id, String nombre, String descripcion, double precio, int cantidad, List<String> url) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.url = url;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getDescripcion() {
+        return descripcion;
+    }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    public double getPrecio() {
+        return precio;
+    }
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    public int getCantidad() {
+        return cantidad;
+    }
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+    public List<String> geturl() {
+        return url;
+    }
+    public static List<String> obtenerImagenesPorProducto(String nombre) {
+        List<String> imagenes = new ArrayList<>();
+        switch (nombre.toLowerCase()) {
+            case "pantalon":
+                imagenes.add("https://th.bing.com/th/id/OIP.BSHW1g-0SojskvjwJUzR_wHaLH?rs=1&pid=ImgDetMain");
+                break;
+            case "pantalon blanco":
+                imagenes.add("https://th.bing.com/th/id/R.d5bf0a5cc9b94bde0529dab2c7db6654?rik=puVSJHf6d3E5Lg&pid=ImgRaw&r=0");
+            break;
+            case "pantalon negro":
+                imagenes.add("https://arksafety.ie/wp-content/uploads/2023/04/C070-Chefs-Black-Trousers-Ark-Safety.jpg");
+            break;
+            case "Camisa":
+                imagenes.add("https://uniformesylogos.com/wp-content/uploads/2022/12/PS_CGTU01T_NATURAL.jpg");
+                break;
+            case "Camisa negra":
+                imagenes.add("https://th.bing.com/th/id/R.6c4b87704e217a13cf2d427587083313?rik=j8ZAaGr9SIKs7w&pid=ImgRaw&r=0");
+            break;
+            case "Camisa blanca":
+                imagenes.add("https://th.bing.com/th/id/R.9b9dead98f44cee772a4fbd2063f8f49?rik=HpsHqCvv4ibmIg&pid=ImgRaw&r=0");
+            break;
+            case "Zapatos":
+                imagenes.add("https://i.pinimg.com/originals/eb/fd/ae/ebfdae6bd86dbcbb62923247645ab782.png");
+                break;
+            case "Tennis":
+                imagenes.add("https://media.gq.com.mx/photos/61e17e3a5def32c5619cedd3/16:9/w_1280,c_limit/tenis%20GettyImages-1353609163.jpg?mbid=social_retweet");
+                break;
+            case "Tennis negros":
+                imagenes.add("https://th.bing.com/th/id/OIP.CxZj5HC-WleZ3-qXsF4yfQAAAA?rs=1&pid=ImgDetMain");
+                break; 
+            case "Tennis blancos":
+                imagenes.add("https://th.bing.com/th/id/OIP.YfL67B2Rt_yK0BVl0Tv46QAAAA?rs=1&pid=ImgDetMain");
+                break;
+            case "Sueter":
+                imagenes.add("https://th.bing.com/th/id/R.13d52ee38c60cde496f7d09641e8558d?rik=%2bLDcHtfi7JuTtg&pid=ImgRaw&r=0");
+                break;
+            case "Sueter blanco":
+                imagenes.add("https://images-na.ssl-images-amazon.com/images/I/61QzegcqgvL._AC_UL1500_.jpg");
+                break; 
+            case "Sueter negro":
+                imagenes.add("https://cdnc.lystit.com/photos/2013/03/28/topshop-black-pearl-sleeve-sweater-by-sister-jane-product-2-7551659-435829982.jpeg");
+                break;      
+            default:
+                imagenes.add("https://via.placeholder.com/150?text=Imagen+No+Disponible"); //Imagen no disponible
+                break;
+        }
+        return imagenes;
+    }
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Nombre: " + nombre + ", Descripción: " + descripcion + ", Precio: $" + precio + ", Cantidad: " + cantidad + ", Url: "+url;
+    }
+}
