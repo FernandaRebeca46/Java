@@ -1,0 +1,71 @@
+package Menu;
+//import java.util.ArrayList;
+import java.util.Scanner;
+//import Menu.Product;
+//import Menu.AgregarProduct;
+//import Menu.Eliminar;
+
+public class Menu {
+    private static Scanner scanner = new Scanner(System.in);
+    //private static ArrayList<Product> inventario = new ArrayList<>();
+    private static Consultar consultar = new Consultar();
+    private static AgregarProduct aggproduct = new AgregarProduct();
+    private static Eliminar eliminar = new Eliminar();
+    private static Fecha fecha = new Fecha();
+    //private static Inventario inventarioo = new Inventario();
+
+    public static void main(String[] args) {
+        fecha.mostrarFechaHoraActual();
+        boolean salir = false;
+
+        while (!salir) {
+            mostrarOpciones();
+            int opciones = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opciones) {
+                case 1:
+                    consultarProductos();
+                    break;
+                case 2:
+                    añadirProductos();
+                    break;
+                case 3:
+                    quitarProductos();
+                    break;
+                case 0:
+                    salir = true;
+                    System.out.println("¡Gracias por ingresar al Catálogo de Productos!");
+                    break;
+                default:
+                    System.out.println("Esa opción no es válida. Por favor, intente de nuevo..");
+            }
+        }
+    }
+    private static void mostrarOpciones() {
+        System.out.println();
+        System.out.println("**********************************************");
+        System.out.println("*  ..Bienvenido al Catálogo de Productos..   *");
+        System.out.println("*============================================*");
+        System.out.println("* Selecciona una de las siguientes opciones: *");
+        System.out.println("* 1) Consultar Productos                     *");
+        System.out.println("* 2) Agregar Producto (tentativo)            *");
+        System.out.println("* 3) Quitar Producto                         *");
+        System.out.println("* 0) Salir                                   *");
+        System.out.println("**********************************************");
+        System.out.println("Opción: ");
+    }
+    private static void consultarProductos() {
+        System.out.println("Consultando productos....: ");
+        System.out.print("Ingrese el nombre del producto: ");
+        String texto = scanner.nextLine();
+        consultar.consultarProductos(texto);
+    }
+    
+    private static void añadirProductos() {
+        aggproduct.añadirProductos(consultar);
+    }
+    private static void quitarProductos() {
+        eliminar.eliminarProducto(consultar);
+    }
+}
